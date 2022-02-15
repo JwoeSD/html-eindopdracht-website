@@ -5,29 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
 
-    <title>Website</title>
+    <title></title>
   </head>
 
   <body>
-    <span style="text-transform:uppercase;font-size:40px;">
-    <div class="navigationbar">
-      <a class="home" href="index.html">home</a>
-      <a class="history" href="history.html">history</a>
-      <a class="types" href="types.html">types</a>
-      <a class="origin" href="origin.html">origin</a>
+    <span style="text-transform: uppercase; font-size: 40px">
+      <div class="navigationbar">
+        <a class="home" href="index.html">home</a>
+        <a class="types" href="types.html">types</a>
+        <a class="origin" href="origin.html">origin/contact</a>
+      </div>
     </span>
 
     <div class="card">
-      <h1 style="position:relative; bottom:90px;">Introduction Noodles</h1>
+      <h1 style="position: relative; bottom: 90px">Introduction Noodles</h1>
+
+      <p style="position: relative; bottom: 100px">
+        Noodles are edibles made from unleavened dough and boiled in water. This
+        group of products is also called pasta named. Depending on the variety,
+        there are fresh and dried noodles.
+        <br /><br />
+        Some noodles are available both fresh and dried. in many Asian
+        countries, noodles have traditionally been one of the staple foods, but
+        also beyond, such as in the case of the Italian pasta.
+      </p>
+    </div>
+
+    <button id="myBtn">hidden-coupon</button>
+    <div id="myModal" class="modal">
       
-        <p style="position:relative; bottom:100px;">...</p>
-    </div>
-  
-
-
-
-    </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+    <p style="text-align:center;font-size:20px;">free noodles in a cup (yumyum of indo)</p>
+      </div>
+      <script>
+        
+        var modal = document.getElementById("myModal");
+        
+        
+        var btn = document.getElementById("myBtn");
+        
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
   </body>
 </html>
